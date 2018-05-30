@@ -40,7 +40,7 @@ def find_lcs(request):
     return HttpResponseBadRequest(json.dumps(data), 'application/json')
 
   values = the_set.keys()
-  shortest = min([string for string in values], key=len)
+  shortest = min(values, key=len)
   all_lcs = []
   current = ""
   for ch in shortest:
